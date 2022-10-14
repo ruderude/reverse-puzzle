@@ -34,12 +34,12 @@ const init = () => {
     }
   }
 
-  // const yNum = randRange(0, 2);
-  // const xNum = randRange(0, 2);
+  const yNum = randRange(0, 2);
+  const xNum = randRange(0, 2);
 
-  // board[yNum][xNum].panel.classList.remove('devil');
-  // board[yNum][xNum].panel.classList.add('angel');
-  // board[yNum][xNum].state = 1;
+  board[yNum][xNum].panel.classList.remove('devil');
+  board[yNum][xNum].panel.classList.add('angel');
+  board[yNum][xNum].state = 1;
 }
 
 const flip = async(x, y) => {
