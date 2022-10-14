@@ -1,0 +1,67 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family:"ヒラギノ丸ゴ Pro W4","ヒラギノ丸ゴ Pro","Hiragino Maru Gothic Pro","ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro","HG丸ｺﾞｼｯｸM-PRO","HGMaruGothicMPRO";
+  width: 100vw;
+}
+
+.title {
+  margin-top: 50px;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #DA8E00;
+  background: -webkit-linear-gradient(-45deg, #F7DE05, #DA8E00, #EDAC06, #F7DE05, #ECB802, #DAAF08, #B67B03, #DA8E00, #EDAC06, #F7DE05, #ECB802, #EDAC06);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.sub_title {
+  margin-top: 5px;
+  text-align: center;
+  color: #242424;
+  font-size: 0.8rem;
+}
+
+.counter {
+  margin-top: 10px;
+  text-align: center;
+}
+
+.container {
+  width: 300px;
+  margin: auto;
+  margin-top: 20px;
+  position: relative;
+}
+
+.cleared {
+  font-size: 1.5rem;
+  width: 100vw;
+  position: absolute;
+  top: 500px;
+  text-align: center;
+  color: #ACB6E5;
+  background: -webkit-linear-gradient(0deg, #ACB6E5, #86FDE8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+  font-weight: 900;
+}
+
+.hidden {
+  display: none;
+}
+
+.angel {
+  background-image: url(./img/angel_suq_mini.png);
+  object-fit: cover;
+}
+
+.devil {
+  background-image: url(./img/devil_suq_mini.png);
+  object-fit: cover;
+}
