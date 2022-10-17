@@ -52,16 +52,55 @@ body {
   font-weight: 900;
 }
 
+.btn_area {
+  width: 100vw;
+  position: absolute;
+  top: 580px;
+  text-align: center;
+}
+
 .hidden {
   display: none;
 }
 
 .angel {
-  background-image: url(./img/angel_suq_mini.png);
+  background-image: url(./img/bodybuilder_woman_min.png);
   object-fit: cover;
 }
 
 .devil {
   background-image: url(./img/devil_suq_mini.png);
   object-fit: cover;
+}
+
+.reset_btn {
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 18px;
+  border-radius: 20px;
+  width: 200px;
+  height: 40px;
+  font-weight: bold;
+  border-bottom: 5px solid #2a3fc5;
+  transition: 0.3s;
+  background-color: #5467eb;
+}
+
+.reset_btn:hover {
+  border-bottom-width: 0;
+  transform: translateY(5px);
+}
+
+.twitter_area {
+  text-align: center;
+}
+
+.twitter_img {
+  width: 150px;
+  margin-top: 500px;
 }

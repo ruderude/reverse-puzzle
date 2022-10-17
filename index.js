@@ -6,12 +6,22 @@ let count = 0;
 const counter = document.getElementById('counter');
 const container = document.getElementById('container');
 const cleared = document.getElementById('cleared');
+const resetBtnArea = document.getElementById('reset_btn_area');
+const resetBtn = document.getElementById('reset_btn');
+const twitterArea = document.getElementById('twitter_area');
+const twitterShare = document.getElementById('twitter_share');
 let isAnimation = false;
 let isGameOver = false;
 
 const randRange = (min, max) => Math.floor(Math.random() * (max - min + 1) + min);
 
 const init = () => {
+  container.innerHTML = '';
+  count = 0;
+  isGameOver = false;
+  cleared.classList.add('hidden');
+  resetBtnArea.classList.add('hidden');
+  twitterArea.classList.add('hidden');
   counter.innerText = count;
   for (let y = 0; y < 3; y++) {
     board[y] = [];
@@ -67,6 +77,11 @@ const flip = async(x, y) => {
   isAnimation = false;
 }
 
+const makeTwiterUrl = (count) => {
+  const url = `https://twitter.com/share?url=https://game.rude7.com/barrage/&via=rude_rockers&related=rude_rockers&hashtags=hashtag,hashtag2&text=めくった回数${count}回!!`;
+  twitterShare.setAttribute('href', url);
+}
+
 const onDown = (x, y) => {
   if (isAnimation || isGameOver) {
     return;
@@ -83,11 +98,18 @@ const onDown = (x, y) => {
   isGameOver = board.flat().every(v => v.state === 1);
   if (isGameOver) {
     setTimeout(() => {
+      makeTwiterUrl(count);
       cleared.classList.remove('hidden');
+      resetBtnArea.classList.remove('hidden');
+      twitterArea.classList.remove('hidden');
       return;
     }, 400)
   }
 }
+
+resetBtn.addEventListener('click', function() {
+  init();
+})
 
 window.onload = () => {
   init();
